@@ -78,3 +78,78 @@ function equipWeapon(object){
 }
 //nope
 //changed 1 to zero dumb mistake
+
+function displayStats(){
+  console.log("Display stat button has been clicked")
+  let heroStats = `Your name was ${hero.name}, `;
+  updateDisplayBar();
+}
+
+
+function getName(){
+  let heroName = document.getElementById("name");
+  hero.name = heroName;
+  console.log(`hero name has been changed to ${hero.name}`)
+}
+
+//code works but form onsubmit causes the page to reload
+//using document.write causes the page to reload too, need to think of solution
+
+//this code controls movement on canvas
+if(rightPress){
+  heroX += 7;
+}
+else if(leftPress){
+  heroX -= 7;
+}
+
+//this controls game over state
+else if (x+ dx < canvas.width)
+  alert("GAME OVER");
+  document.location.reload();
+}
+
+//breaks the code
+
+if(x + dx > canvas.width-50) {
+  dx = -dx;
+}
+//this controls game over state
+else if (x+ dx > canvas.width)
+  alert("GAME OVER");
+  document.location.reload();
+}
+
+
+//this code controls the game over state, when blackbox reaches the right side
+} else if(x + dx > canvas.width-boxSize) {
+    alert("GAME OVER");
+    document.location.reload();
+}
+//working code but needs to be replaced
+
+//something is wrong in the code here preventing the white box from colliding with blackbox
+//this code controls the game over state, when blackbox reaches the right side
+
+else if(x + dx > canvas.width-boxSize) {
+    if(y > heroY && y < heroY + heroWidth) {
+        dx = -dx;
+    }
+    else {
+        alert("GAME OVER");
+        document.location.reload();
+    }
+}
+
+//it should be the opposite of this code from mdn
+if(y + dy < ballRadius) {
+    dy = -dy;
+} else if(y + dy > canvas.height-ballRadius) {
+    if(x > paddleX && x < paddleX + paddleWidth) {
+        dy = -dy;
+    }
+    else {
+        alert("GAME OVER");
+        document.location.reload();
+    }
+}

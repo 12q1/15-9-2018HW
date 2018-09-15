@@ -1,17 +1,29 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Mocha Tests</title>
+    <title>RUN THE TEST</title>
     <link href="https://unpkg.com/mocha@4.0.1/mocha.css" rel="stylesheet" />
-    <link href="style/style.css" rel="stylesheet"/>
+    <link href="style/style.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
-
-
   <!-- YOUR HTML HERE -->
+  <div id ="orangeBox">
+    <canvas id="runTheTest" width="1920" height="400"></canvas>
+    <div id="cloud">
+    </div>
+  </div>
+  <form id="form" onsubmit="getName()" >
+    <label for="name"> What's your name? </label>
+    <input type="text" id="name" placeholder="..."><br>
+  </form>
+  <div id="statBar">
+    <span id="user">Hero Name</span>
+    <span id="health">Health</span>
+  </div>
+  </div>
 
 
-
+<div id="mochaStuff"> <!--mocha code div-->
   <!-- I RECOMMEND YOU LEAVE THE REST UNTOUCHED -->
   <button onclick="mocha.checkLeaks(); mocha.run();">Run the tests!</button>
   <div id="mocha"></div>
@@ -22,9 +34,12 @@
   <script>mocha.setup('bdd')</script>
   <script src="YOUR_JAVASCRIPT_HERE.js"></script>
   <script src="game_logic.test.js"></script>
+</div>
+</div><!--end of mocha code div-->
 
 </body>
 </html>
 <img id="inn" onclick="restoreHealth()" src= >
 <img id="dagger" onclick="daggerItemGet()" src= >
 <img id="bag" onclick="bagClick()" src=>
+<button id="DisplayStats" type="button" onclick="displayStats()"> Display Stats </button>
