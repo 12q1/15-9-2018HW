@@ -9,6 +9,14 @@ const hero = {
   },
 };
 
+const weapons = {
+  daggerItem : {
+    type : "dagger",
+    damage : 2,
+  },
+
+}
+
 function rest(object){
   let restore = object
     if (restore.health < 10) {
@@ -19,12 +27,24 @@ function rest(object){
 }
 
 function restoreHealth(){
-    console.log("inn button has been clicked");
+    console.log("inn image has been clicked");
     hero.health = 10;
   }
 
-function pickUpItem(){
+function pickUpItem(heroperson, object){
+  let dude = heroperson;
+  let item = object;
+    dude.inventory.push(item);
+    console.log("item added to inventory");
+    heroperson = dude;
+    return heroperson;
 }
+
+function daggerItemGet(){
+    console.log("dagger image has been clicked");
+    hero.inventory.push(weapons.daggerItem);
+    console.log("dagger added to inventory");
+  }
 
 function equipWeapon(){
 
