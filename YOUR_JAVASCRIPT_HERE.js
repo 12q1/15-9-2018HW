@@ -46,8 +46,24 @@ function daggerItemGet(){
     console.log("dagger added to inventory");
   }
 
-function equipWeapon(){
-
+function equipWeapon(object){
+  let newObject = object;
+  let newWeapon = newObject.inventory[0];
+  let oldWeapon = newObject.weapon;
+//I could probably handle the object better with less code but I'm not sure how and this is working.
+    if (newObject.inventory.length===0){
+      console.log("cannot equip items if inventory is empty")
+    }
+    else {
+    newObject.inventory.push(oldWeapon);
+    newObject.weapon = newWeapon;
+    object = newObject;
+    return object;
+    }
 }
 
+function bagClick(){
+  console.log("bag image has been clicked");
+    equipWeapon(hero);
+}
 // Write your JS here
