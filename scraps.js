@@ -179,3 +179,15 @@ function checkLeft(){
   }
 }
 //this is kinda working
+
+p{font-family: Helvetica, Arial, sans-serif;
+font-size: 19px;
+color: white;
+display: block;
+width: 400px;
+margin: 0 auto;
+text-align: center;
+text-decoration:none;
+}
+
+//old css styling for p I want to remove

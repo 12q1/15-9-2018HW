@@ -5,11 +5,15 @@
     <link href="https://unpkg.com/mocha@4.0.1/mocha.css" rel="stylesheet" />
     <link href="style/style.css" rel="stylesheet" type="text/css"/>
 </head>
+<script>
+let screenWidth = window.innerWidth;
+</script>
 <body>
   <!-- YOUR HTML HERE -->
   <div id ="orangeBox">
     <canvas id="runTheTest" width="1920" height="400"></canvas>
     <div id="cloud">
+        <p id="gameText"> use your arrow keys to move around</p>
     </div>
   </div>
   <form id="form" onsubmit="getName()" >

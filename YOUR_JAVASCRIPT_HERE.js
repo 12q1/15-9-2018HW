@@ -229,6 +229,9 @@ function updateCol(){
 
 //this code sets an interval of 10 miliseconds to update the canvas
 function draw(){
+  //this code adjusts to the user's screen size
+  ctx.canvas.width = window.innerWidth;
+
   //this code controls the black box speed increase
 
 
@@ -281,12 +284,11 @@ function draw(){
   else if(downPress && heroY < canvas.height-heroWidth){
     heroY += 7;
   }
-
+  requestAnimationFrame(draw);
 }
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
-setInterval(draw,10);
-
+draw();
 
 // Write your JS here
 
