@@ -153,3 +153,29 @@ if(y + dy < ballRadius) {
         document.location.reload();
     }
 }
+
+function checkBottom(){
+  console.log(`bottom collision detection running`);
+  if(bottomSlider.slideBlack[0]>=bottomSlider.slideWhite[0]&&bottomSlider.slideBlack[1]<=bottomSlider.slidWhite[1]){
+    console.log('bottom sliders are colliding');
+  }
+}
+
+//this collision detection is a mess
+
+function checkBottom(){
+  //console.log(`bottom collision detection running`);
+  //console.log(villainBox.bottomRight[0]);
+  if(heroBox.bottomRight[0]>villainBox.bottomLeft[0]&&heroBox.bottomLeft[0]<villainBox.bottomRight[0]){
+    console.log("bottom slider triggered");
+    colBottom = true;
+  }
+}
+
+function checkLeft(){
+  if(heroBox.bottomLeft[1]>villainBox.topLeft[1]&&heroBox.topLeft[1]<villainBox.bottomLeft[1]){
+    colLeft = true;
+    console.log('left slider triggered')
+  }
+}
+//this is kinda working
