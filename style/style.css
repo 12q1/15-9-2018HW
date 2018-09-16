@@ -11,7 +11,6 @@ body, label {
 #runTheTest{
   position: absolute;
   z-index: 2;
-  width : 100%;
 }
 
 #orangeBox{
@@ -58,6 +57,7 @@ body, label {
 
 #mochaStuff{
   background-color: black;
+  margin-top: 300px;
 }
 
 #inn, #dagger, #bag {
