@@ -1,3 +1,18 @@
+# Run the Test
+Run the test is a small html canvas based game I created as part of a bonus homework assignment. The game was originally meant to be a sidescrolling runner and the homework involved running mocha tests hence the name.
+
+You can try it out at https://12q1.github.io/runthetest/
+
+A great deal of the logic was modelled after this tutorial on MDN.
+(https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)
+
+I learned a lot from this project - wrote my own collision detection functions, got to grips with HTML canvas, test driven development, and so forth. 
+
+I have no real plans to expand on this project. In retrospect I have made some fundamental errors such as mutations and not following the principles of OOP. Adding more to this program would require a total rework. Despite these issues I'm happy with the project and take it as a learning experience. 
+
+For context the homework assignment is copied below:
+
+
 # Beginner Bootcamp Homework
 
 Hello beginner bootcampers. Here is your first formal homework  assignment!
